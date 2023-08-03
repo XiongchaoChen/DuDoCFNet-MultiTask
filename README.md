@@ -17,7 +17,7 @@ This repository contains the PyTorch implementation of the Dual-Domain Coarse-to
 ### Citation 
 If you use this code for your research or project, please cite:
 
-    xxx
+    xxx (Under review ...)
 
 
 
