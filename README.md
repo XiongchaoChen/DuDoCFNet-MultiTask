@@ -72,4 +72,54 @@ where \
 `Mask_Proj`: binary projection mask with a size of 32 x 32 x 20. 1 refers to the central limited-angle regions. \
 
 
+### To Run the Code
+Sample training/testing scripts are provided at the root folder as `train.sh` and `test.sh`.
+
+- Train the model 
+```bash
+python train.py --experiment_name 'train_1' --model_type 'model_cnn' --data_root './xxx' --norm 'BN' --net_filter 32 --n_denselayer 4 --growth_rate 16 --lr_G1 1e-3 --lr_G2 1e-4 --step_size 1 --gamma 0.99 --n_epochs 150 --batch_size 2 --eval_epochs 5 --snapshot_epochs 5 --gpu_ids 0
+```
+where \
+`--experiment_name` experiment name for the code, and save all the training results in this under this "experiment_name" folder. \
+`--model_type`: model type used (default convolutional neural networks). \
+`--data_root`: the path of the dataset. \
+`--norm`: batch normalization in the CNN modules (default: 'BN'). \
+`--net_filter`: num of filters in the densely connected layers (default: 32). \
+`--n_denselayer`: num of the densely connected layers (default: 4). \
+`--growth_rate`: growth rate of the densely connected layers (default: 16). \
+`--lr_G1`: learning rate of projection-domain modules (default: 1e-3). \
+`--lr_G2`: learning rate of image-domain modules (default: 1e-3). 
+`--step_size`: num of epoch for learning rate decay .\
+`--gamma`: learning decay rate. \
+`--n_epochs`: num of epochs of training. \
+`--batch_size`: training batch size. \
+`--test_epochs`: number of epochs for periodic validation. \
+`--save_epochs`: number of epochs for saving trained model. \
+`--gpu_ids`: GPU configuration.
+
+
+- Test the model 
+```bash
+python test.py --resume './outputs/train_1/checkpoints/model_xx.pt' --experiment_name 'test_1_xx' --model_type 'model_cnn' --data_root '../xxx' --norm 'BN' --net_filter 32 --n_denselayer 4 --growth_rate 16 --batch_size 2 --gpu_ids 0
+```
+where \
+`--resume`: the path of the model to be tested. \
+`--resume_epoch`: training epoch of the model to be tested. 
+
+### Data Availability
+The original dataset in this study is available from the corresponding author (chi.liu@yale.edu) upon reasonable request and approval of Yale University. 
+
+### Contact 
+If you have any questions, please file an issue or directly contact the author:
+```
+Xiongchao Chen: xiongchao.chen@yale.edu, cxiongchao9587@gmail.com
+```
+
+
+
+
+
+
+
+
 
