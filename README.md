@@ -2,7 +2,7 @@
 
 Xiongchao Chen, Bo Zhou, Xueqi Guo, Huidong Xie, Qiong Liu, James S. Duncan, Albert J. Sinusas, Chi Liu
 
-## Overview
+# Overview
 ![image](IMAGE/Figure_1.png)
 
 ## Projection-domain framework
