@@ -110,7 +110,7 @@ where \
 The original dataset in this study is available from the corresponding author (chi.liu@yale.edu) upon reasonable request and approval of Yale University. 
 
 ### Contact 
-If you have any questions, please file an issue or directly contact the author:
+If you have any questions, please file an issue or directly contact the author via xiongchao.chen@yale.edu or cxiongchao9587@gmail.com.
 ```
 Xiongchao Chen: xiongchao.chen@yale.edu, cxiongchao9587@gmail.com
 ```
